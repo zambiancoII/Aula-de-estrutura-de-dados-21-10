@@ -1,37 +1,28 @@
-# 🔄 Algoritmos de Ordenação (Seleção Direta e Bubble Sort) em C++
+# 🔄 Algoritmos de Ordenação e Busca em C++
 
-Este repositório reúne aplicações práticas desenvolvidas em **C++** focadas no estudo de **algoritmos de ordenação**, que são técnicas fundamentais da ciência da computação para organizar elementos de um vetor em uma ordem específica (crescente ou decrescente).
-
----
-
-## 📌 Sobre o Projeto
-
-Estes projetos foram desenvolvidos como parte das atividades avaliativas de **Estrutura de Dados** sob a orientação do **Professor Cação**. O objetivo principal foi compreender a lógica por trás da organização de dados, analisando o comportamento, as passagens e as trocas de posições em vetores estáticos.
-
-O repositório contempla dois dos principais métodos clássicos de ordenação:
+Este repositório reúne aplicações práticas desenvolvidas em **C++** focadas no estudo de **algoritmos clássicos de ordenação e busca**, fundamentais para a manipulação eficiente de vetores na ciência da computação.
 
 ---
 
-## 🔍 1. Ordenação por Seleção Direta (Selection Sort)
+## 📌 Sobre o Repositório
 
-Este algoritmo foca em selecionar repetidamente o maior (ou menor) elemento da parte não ordenada do vetor e colocá-lo em sua posição definitiva no final do vetor a cada passagem.
-
-### ⚙️ Como Funciona:
-* **Varredura por Passagens:** Percorre o vetor repetidamente, reduzindo o escopo a cada ciclo (`N - pass`).
-* **Busca de Máximos:** Identifica o maior valor e a sua respectiva posição (`pos`) na sub-lista atual.
-* **Posicionamento:** Move o maior elemento encontrado para o final da faixa não ordenada, ajustando a estrutura de forma iterativa até que todo o vetor esteja ordenado.
-* **Feedback:** Exibe o estado do vetor após cada passagem no terminal.
+Estes projetos foram desenvolvidos como parte das atividades avaliativas de **Estrutura de Dados** sob a orientação do **Professor Cação**. O objetivo principal foi compreender e implementar a lógica algorítmica para organizar elementos e localizar dados dentro de estruturas estáticas.
 
 ---
 
-## 🫧 2. Ordenação por Bolha Otimizada (Bubble Sort)
+## 🗂️ Projetos Incluídos
 
-Este algoritmo compara pares de elementos adjacentes e os troca de lugar caso estejam fora de ordem, fazendo com que os maiores elementos "flutuem" para o final do vetor.
+### 1. 🔍 Ordenação por Seleção Direta (Selection Sort)
+* **Descrição:** Algoritmo que seleciona repetidamente o maior elemento da parte não ordenada do vetor e o posiciona corretamente no final a cada passagem.
+* **Principais Conceitos:** Varreduras com escopo decrescente (`N - pass`), busca de valores máximos e troca de posições baseada em índices.
 
-### ⚙️ Como Funciona:
-* **Comparações Adjacentes:** Analisa elementos vizinhos (`x[i]` e `x[i+1]`), realizando a troca com o auxílio de uma variável temporária (`aux`) se o primeiro for maior que o segundo.
-* **Otimização por Flag (`troca`):** Utiliza uma variável de controle (`troca=1`). Se durante uma passagem completa nenhuma alteração for realizada, significa que o vetor já está totalmente ordenado, encerrando o loop antecipadamente para economizar processamento.
-* **Feedback:** Exibe o número da passagem e o estado atualizado do vetor sempre que ocorre uma troca efetiva.
+### 2. 🫧 Ordenação por Bolha Otimizada (Bubble Sort)
+* **Descrição:** Compara elementos adjacentes e os troca de lugar caso estejam fora de ordem, fazendo com que os maiores valores "flutuem" para o final do vetor.
+* **Principais Conceitos:** Comparações vizinhas, variável auxiliar de troca e **otimização por flag (`troca`)** para encerrar o loop antecipadamente caso o vetor já esteja ordenado.
+
+### 3. 🔎 Busca Sequencial em Vetor
+* **Descrição:** Aplicação interativa que permite ao usuário informar uma chave de busca para localizá-la dentro de um vetor numérico estático.
+* **Principais Conceitos:** Varredura linear, controle de interrupção por flag (`achou`) e validação de existência com retorno de índice (posição).
 
 ---
 
@@ -46,32 +37,24 @@ Este algoritmo compara pares de elementos adjacentes e os troca de lugar caso es
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/zambiancoII/Aula-de-estrutura-de-dados-21-10.git)
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
 Acesse a pasta do projeto:
 
 Bash
 cd seu-repositorio
 Compile o arquivo desejado:
 
-Para a Seleção Direta:
+Para a Seleção Direta: g++ selecao.cpp -o selecao
 
-Bash
-g++ selecao.cpp -o selecao
-Para o Bubble Sort:
+Para o Bubble Sort: g++ bubblesort.cpp -o bubblesort
 
-Bash
-g++ bubblesort.cpp -o bubblesort
-Execute o programa:
+Para a Busca Sequencial: g++ busca.cpp -o busca
 
-No Linux / macOS:
+Execute o programa correspondente:
 
-Bash
-./selecao  # ou ./bubblesort
-No Windows:
+No Linux / macOS: ./selecao (ou ./bubblesort, ./busca)
 
-DOS
-selecao.exe  # ou bubblesort.exe
-
+No Windows: selecao.exe (ou bubblesort.exe, busca.exe)
 
 👨‍🏫 Créditos e Agradecimentos
 Projetos avaliativos desenvolvidos para a disciplina de Estrutura de Dados sob a orientação do Professor Cação.
